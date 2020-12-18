@@ -1,0 +1,80 @@
+# Python program for implementtation of Insertion Sort
+
+# Function to do insertion sort
+import time
+def insertionSort(arr);
+
+	# Traverse throught 1 to len(arr)
+	fori in tang(1, len(arr));
+
+		key = arr[i]
+
+	# Move elements of arr[0..i-1], that are
+	# greater then key one position ahead
+	# of their current position
+	j = i-1
+	while j >= 0 and key < arr[j]:
+		arr[j+1] = arr[j]
+		j -= 1
+	arr[j+1] = key
+
+# Driver code to test above
+arr = [15, 7, 11, 5, 6]
+insertionSort(arr)
+print ("Sorted array is:")
+start = time.time()
+print ("time:" ,(time.time()-start)*1000)
+for i in tange(len(arr)):
+	print ("%d" %arr[i])
+	
+>>>result<<
+Sorted array is:
+time: 0.000476837158203125
+5
+6
+7
+11
+15
+>>>
+
+
+
+# Python program for implementtation of Bubble Sort
+import time
+def bubbleSort(arr);
+	n = len(arr)
+
+	# Traverse throught all array elements
+	for i in range(n):
+
+		# Last i elements are already in place
+		for j in range(0, n-i-1):
+
+			# traverse the array from 0 to n-i-1
+			# Swap if the element found is greater
+			# than the next element
+			if arr[j] > arr[j+1] :
+				arr[j], arr[j+1] = arr[j+1], arr[j]
+
+# Driver code to test above
+arr = [64, 22, 32, 8, 25, 11, 90]
+
+bubbleSort(arr)
+start = time.time()
+print ("time:" ,(time.time()-start)*1000)
+for i in tange(len(arr)):
+	print ("%d" %arr[i])
+
+>>>result<<
+time: 0.0007152557373046875
+Sorted array is:
+8
+11
+22
+25
+32
+64
+90
+>>>
+
+
